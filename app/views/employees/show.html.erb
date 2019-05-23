@@ -1,0 +1,23 @@
+<img src = "<%=@employee.img_url%>">
+
+<font size="5"  >
+<table style="border:1px solid black;", cellspacing="15"> 
+    <thead>
+    <tr> 
+        <th>Name</th>
+        <th>Breed</th>
+        <th>Owners</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr> 
+        
+        <td><%=@employee.first_name + " " + @employee.last_name%></td>
+        <td><%=@employee.title%></td> 
+        <td><%=@employee.office%></td> 
+        <td><%=@employee.alias%></td> 
+         
+    </tr>
+    </tbody>
+    </table>
+</font>

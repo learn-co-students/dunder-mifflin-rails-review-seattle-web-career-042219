@@ -1,0 +1,21 @@
+<h1>Dogs</h1>
+
+<table style="border:1px solid black;", cellspacing="15"> 
+    <thead>
+    <tr> 
+        <th>Dog Name</th>
+        <th>Dog Breed</th>
+        <th>Owners</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%@dogs.each do |d|%>
+    <tr> 
+        
+        <td><%= link_to d.name, dog_path(d)%></td>
+        <td><%=d.breed%></td> 
+        <td><%d.employees.each do |e|%><%= e.first_name + " " + e.last_name%><br><%end%>      
+        <%end%>
+    </tr>
+    </tbody>
+    </table>
