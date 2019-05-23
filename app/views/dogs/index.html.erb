@@ -1,0 +1,20 @@
+<h1>Dogs of Dunder Mifflin</h1>
+
+<table style="width: 35%">
+  <tr>
+    <th>Name</th>
+    <th>Breed</th>
+    <th>Age</th>
+    <th>Link</th>
+  </tr>
+
+  <% @dogs.sort_by{|dog| dog.employees.length}.each do |dog|%>
+    <tr>
+      <td><%= dog.name%></td>
+      <td><%= dog.breed%></td>
+      <td><%= dog.age%></td>
+      <td><%= link_to "Show Dog", dog%></td>
+    </tr>
+    <%end%>
+
+</table>
