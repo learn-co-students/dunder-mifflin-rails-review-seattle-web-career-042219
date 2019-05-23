@@ -1,0 +1,14 @@
+<img src="<%= @employee.img_url %>" alt="Employee Headshot" height="25%" width="25%"><br>
+
+
+    Name: <%= @employee.to_s %><br>
+
+    Alias : <%= @employee.alias %><br>
+
+    Title: <%= @employee.title %><br>
+
+    Office: <%= @employee.office %><br>
+
+    Dog: <%= @employee.dog.name %><br>
+
+    <%= link_to "Edit", edit_employee_path %>

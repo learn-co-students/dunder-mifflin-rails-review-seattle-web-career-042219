@@ -1,0 +1,6 @@
+<ul>
+  <% @dogs.each do |dog| %>
+  <li><%= link_to dog.name, dog %></li>
+  <li><%= dog.employees.length %></li>
+  <% end %>
+</ul>
