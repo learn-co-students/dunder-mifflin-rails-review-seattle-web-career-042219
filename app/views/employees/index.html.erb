@@ -1,0 +1,30 @@
+<h1>Employees</h1>
+
+<table style="border:1px solid black;", cellspacing="15"> 
+    <thead>
+    <tr> 
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Alias</th>
+        <th>Title</th>
+        <th>Office</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%@employees.each do |e|%>
+    <tr> 
+        
+        <td><%= link_to e.first_name, employee_path(e)%></td>
+        <td><%=e.last_name%></td> 
+        <td><%=e.alias%></td> 
+        <td><%=e.title%></td> 
+        <td><%=e.office%></td>    
+        <%end%>
+    </tr>
+    </tbody>
+    </table>
+    <br>
+    <br>
+    <h3>Create Employee:</h3>
+
+    <%=button_to "Create Employee", new_employee_path, method: :get%>
