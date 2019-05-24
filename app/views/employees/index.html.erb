@@ -1,0 +1,7 @@
+<h3>Employees</h3>
+
+<% @employees.each do |employee| %>
+<br>
+Employee Name: <%= link_to(employee.name, employee) %>
+<br>
+<% end %>

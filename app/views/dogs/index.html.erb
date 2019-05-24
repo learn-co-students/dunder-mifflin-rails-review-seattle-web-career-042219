@@ -1,0 +1,7 @@
+<h3>Dogs</h3>
+
+<% @dogs.each do |dog| %>
+<br>
+Dog name: <%= link_to(dog.name, dog) %>
+<br>
+<% end %>
