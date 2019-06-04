@@ -9,6 +9,14 @@
   </head>
 
   <body>
+  <div id="navbar">
+  <h3>
+    <%= link_to "Employees", employees_path %> | <%= link_to "Dogs",
+    dogs_path %>
+  </h3>
+</div>
+<% flash.each do |name, msg| %> <%= content_tag :div, msg, class: name %> <%
+end %>
     <%= yield %>
   </body>
 </html>
