@@ -47,8 +47,8 @@ class EmployeesController < ApplicationController
         else
             flash[:error] = 'Employee did not delete'
             puts @employee.errors.full_messages
-            redirect_to employee_path(@employee)
         end
+        redirect_to employees_path
     end
 
     private

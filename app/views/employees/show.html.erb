@@ -7,3 +7,7 @@
 <h3>Dog Name: <%= @employee.dog.name %></h3>
 <br />
 <img src="<%= @employee.img_url %>" />
+<br>
+<h3><%= link_to "Edit this Employee", edit_employee_path %></h3>    
+<h3><%= link_to "Delete", employee_path(@employee), method: :delete, data: { confirm: 'Are you sure?' } %></h3>
+<input name="_method" type="hidden" value="delete" />
