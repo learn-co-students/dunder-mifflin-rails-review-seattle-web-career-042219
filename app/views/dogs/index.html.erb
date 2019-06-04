@@ -1,18 +1,14 @@
 <h1>View all Dogs</h1>
-
+<hr>
 <% @dogs.each do |dog| %>
 <h3>Name: <%= link_to dog.name, dog_path(dog) %></h3>
 <% end %>
 <hr>
 
+<h3>Dogs by number of Employees</h3>
 
-# <% x= @dogs.sort { |a,b| a[:employees.size] <=> b[:employees.size] } %>
- <%= @dogs %>
-<% x = @dogs.sort_by { |dog| dog[:employees.size]} %>
-<%= x %>
+<% x = @dogs.sort_by { |dog| dog.employees.size}.reverse! %>
+
 <% x.each do |dog| %>
-    <h3>Name: <%= link_to dog.name, dog_path(dog) %></h3>
-    <h3>Owners: <%= dog.employees.size %></h3>
+    <h3>Name: <%= link_to dog.name, dog_path(dog) %> Owners: <%= dog.employees.size %></h3>
 <% end %>
-
-<!--  BONUS: Make an option to sort the dogs on the index page by the number of employees that belong to them.-->
